@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "656b76d630f615f7347cc92c"
+  },
+  "orderId": "CA202312021326301323559",
+  "user": {
+    "$oid": "65697538721824d58864a006"
+  },
+  "createTime": {
+    "$date": "2023-12-02T18:26:30.133Z"
+  },
+  "status": "paid",
+  "products": [
+    {
+      "bookId": "xNgstAEACAAJ",
+      "bookPrice": 23.99,
+      "bookCount": 1,
+      "_id": {
+        "$oid": "656b76d630f615f7347cc92d"
+      }
+    },
+    {
+      "bookId": "kLAoswEACAAJ",
+      "bookPrice": 99.98,
+      "bookCount": 2,
+      "_id": {
+        "$oid": "656b76d630f615f7347cc92e"
+      }
+    },
+    {
+      "bookId": "1o7D0m_osFEC",
+      "bookPrice": 46.12,
+      "bookCount": 3,
+      "_id": {
+        "$oid": "656b76d630f615f7347cc92f"
+      }
+    },
+    {
+      "bookId": "L18VBQAAQBAJ",
+      "bookPrice": 19.22,
+      "bookCount": 1,
+      "_id": {
+        "$oid": "656b76d630f615f7347cc930"
+      }
+    }
+  ],
+  "subtotal": 243.17,
+  "tax": 31.61,
+  "shipping": 20,
+  "grandTotal": 294.78,
+  "discount": 29.48,
+  "actualPayment": 265.3,
+  "paymentCard": "4242424242424242",
+  "firstName": "Yao",
+  "lastName": "Guo",
+  "phoneNumber": "13554446775",
+  "unit": "201-28",
+  "streetNumber": "901",
+  "streetName": "Shenjialong Rd.",
+  "postalCode": "200000",
+  "city": "Shanghai",
+  "province": "Shanghai",
+  "country": "China",
+  "__v": 0
+}]

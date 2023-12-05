@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "65697538721824d58864a006"
+  },
+  "username": "test",
+  "email": "cedric960912@gmail.com",
+  "password": "$2b$10$m8G8R9shWChvYo.a.dhzQ.20Bzx1BvCanUTHpHjnDcqpdbWPzsdHy",
+  "emailStatus": "verified",
+  "role": "user",
+  "accountStatus": "active",
+  "firstname": "Cedric",
+  "middlename": "Yao",
+  "lastname": "Guo",
+  "birthday": "1996-10-23",
+  "phonenumber": "2269989912",
+  "apartment": 410,
+  "streetnumber": 160,
+  "streetname": "Cherryhill Place",
+  "postalcode": "N6H 4M4",
+  "city": "London",
+  "province": "ON",
+  "country": "Canada",
+  "tokenVersion": 0,
+  "verificationCodeTypes": [
+    {
+      "type": "registration",
+      "code": "221469",
+      "createdAt": {
+        "$date": "2023-12-01T05:55:04.388Z"
+      },
+      "_id": {
+        "$oid": "65697538721824d58864a009"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "656a4eb279afd0e34d5cd948"
+  },
+  "username": "King",
+  "email": "guocedric5@gmail.com",
+  "password": "$2b$10$JWebFywdgiDlKZWpUDCvz.JAmo0QSMAlWHq6rqidXFeSYSopRz9pS",
+  "emailStatus": "verified",
+  "role": "admin",
+  "accountStatus": "active",
+  "firstname": "Xiaoxing",
+  "middlename": "",
+  "lastname": "Li",
+  "birthday": "1998-01-28",
+  "phonenumber": "1234567890",
+  "apartment": 310,
+  "streetnumber": 961,
+  "streetname": "Hongqiao Rd.",
+  "postalcode": "200000",
+  "city": "Shanghai",
+  "province": "Shanghai",
+  "country": "China",
+  "tokenVersion": 0,
+  "verificationCodeTypes": [
+    {
+      "type": "registration",
+      "code": "984401",
+      "createdAt": {
+        "$date": "2023-12-01T21:22:58.685Z"
+      },
+      "_id": {
+        "$oid": "656a4eb279afd0e34d5cd94b"
+      }
+    },
+    {
+      "type": "passwordReset",
+      "code": "254937",
+      "createdAt": {
+        "$date": "2023-12-02T20:58:03.396Z"
+      },
+      "_id": {
+        "$oid": "656b9a5b6ac987c3858f2f6c"
+      }
+    }
+  ],
+  "__v": 2
+}]
