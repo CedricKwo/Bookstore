@@ -303,7 +303,7 @@ exports.verifyRole = async (req, res) => {
 exports.getUserProfileByEmail = async (req, res) => {
   try {
     const userId = req.userData.userId;
-    const emailInput = req.body;
+    const emailInput = req.query;
     const requestedUser = await userService.getUserProfileByEmail(userId, emailInput.email);
 
     let statusCode = 200;

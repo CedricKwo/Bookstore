@@ -46,7 +46,7 @@ exports.createNewBooklist = async (req, res) => {
 exports.requestAddToBooklist = async (req, res) => {
     try {
         const userId = req.userData.userId;
-        const bookId = req.body.bookId;
+        const bookId = req.query.bookId;
 
         const booklistRes = await booklistService.requestAddToBooklist(userId, bookId);
   
