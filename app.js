@@ -5,7 +5,7 @@ const bookRoutes = require('./routes/bookRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const auth = require('./routes/auth');
-const booklistRoutes = require('./routes/bookListRoutes');
+const booklistRoutes = require('./routes/booklistRoutes');
 const config = require('./config');
 
 const app = express();
@@ -29,6 +29,7 @@ app.use('/api/auth', auth);
 app.use('/api/booklists', booklistRoutes);
 
 const PORT = process.env.PORT || config.app.port;
-app.listen(PORT, () => {
+const Host = '0.0.0.0';
+app.listen(PORT, Host, () => {
   console.log(`Server running on port ${PORT}`);
 });
