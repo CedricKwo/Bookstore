@@ -168,6 +168,30 @@ exports.queryBooklistInfo = async (req, res) => {
       }
 };
 
+// Query a certain booklist
+exports.queryACertainBooklist = async (req, res) => {
+    try {
+        const booklistId = req.query.booklistId;
+
+        const booklistInfo = await booklistService.queryACertainBooklistInfo(booklistId);
+
+        let statusCode = 200;
+        let message = booklistInfo;
+
+        if (booklistInfo === 1) {
+
+            statusCode = 401;
+            message = 'Booklist not found';
+            
+        }
+
+        res.status(statusCode).json({ message });
+  
+      } catch (err) {
+      res.status(500).json({ message: err.message });
+      }
+};
+
 // Update booklist info
 exports.updateBooklistInfo = async (req, res) => {
     try {

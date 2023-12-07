@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const { Booklist, Comment } = require('../models/Booklist');
 const User = require('../models/User');
 const userService = require('../services/userService')
@@ -156,6 +157,28 @@ exports.queryBooklistInfo = async (userId) => {
     }
 };
 
+// Query a certain booklist
+exports.queryACertainBooklistInfo = async (booklistId) => {
+    try {
+        if (!mongoose.Types.ObjectId.isValid(booklistId)) {
+            return 1;
+        }
+        const booklistInfo = await Booklist.findById(booklistId);
+
+        // User not found
+        if (!booklistInfo) {
+            return 1;
+        }
+
+
+        return booklistInfo;
+
+    } catch (err) {
+        throw new Error(err.message);
+    }
+};
+
+
 // update bookList info
 exports.updateBooklistInfo = async (userId, updatedBooklistInfo) => {
     try {
@@ -168,6 +191,10 @@ exports.updateBooklistInfo = async (userId, updatedBooklistInfo) => {
 
         const booklistId = updatedBooklistInfo._id;
         console.log("booklistId", booklistId);
+
+        if (!mongoose.Types.ObjectId.isValid(booklistId)) {
+            return 2;
+        }
         const bookList = await Booklist.findById(booklistId);
 
         // booklist not found
@@ -308,6 +335,10 @@ exports.adminMaintainComments = async (userId, bookListId, commentId, display) =
         }
         else if (user === 2) {
             return 2;
+        }
+
+        if (!mongoose.Types.ObjectId.isValid(bookListId)) {
+            return 3;
         }
 
         const bookList = await Booklist.findById(bookListId);

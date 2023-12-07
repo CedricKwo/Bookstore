@@ -8,6 +8,7 @@ router.get('/request-add-book-to-booklist', authMiddleware, booklistController.r
 router.post('/add-book-to-booklist', authMiddleware, booklistController.addBookToBooklist);
 router.put('/remove-book-from-booklist', authMiddleware, booklistController.removeBookFromBooklist);
 router.get('/query-booklist-info', authMiddleware, booklistController.queryBooklistInfo);
+router.get('/query-a-certain-booklist-info', booklistController.queryACertainBooklist);
 router.put('/update-booklist-info', authMiddleware, booklistController.updateBooklistInfo);
 router.delete('/delete-booklist', authMiddleware, booklistController.deleteBooklist);
 router.get('/unauthorized-get-public-booklist', booklistController.getLastestTenPublicBooklist);
