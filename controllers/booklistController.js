@@ -331,7 +331,7 @@ exports.adminMaintainComments = async (req, res) => {
         }
         else if (booklist === 2) {
             statusCode = 402;
-            message = 'User is not admin, no access to the content';
+            message = 'User is not admin or manager, no access to the content';
         }
         else if (booklist === 3) {
 

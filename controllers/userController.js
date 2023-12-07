@@ -289,7 +289,7 @@ exports.verifyRole = async (req, res) => {
 
     else if (user === 2) {
       statusCode = 402;
-      message = 'User is not admin, no access to this content';
+      message = 'User is not admin or manager, no access to this content';
     }
 
 
@@ -316,7 +316,7 @@ exports.getUserProfileByEmail = async (req, res) => {
 
     else if (requestedUser === 2) {
       statusCode = 402;
-      message = 'User is not admin, no access to this content';
+      message = 'User is not admin or manager, no access to this content';
     }
 
     res.status(statusCode).json({ message });
@@ -342,7 +342,7 @@ exports.updateUserProfileByEmail = async (req, res) => {
 
     else if (requestedUser === 2) {
       statusCode = 402;
-      message = 'User is not admin, no access to this content';
+      message = 'User is not admin or manager, no access to this content';
     }
 
     res.status(statusCode).json({ message });

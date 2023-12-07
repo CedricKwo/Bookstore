@@ -248,8 +248,8 @@ async function verifyRole (userId){
     return 1;
   }
 
-  // User is not admin
-  else if (user.role !== 'admin'){
+  // User is not admin or manager or manager
+  else if (user.role !== 'admin' && user.role !== 'manager'){
     return 2;
   }
 
