@@ -299,6 +299,31 @@ exports.verifyRole = async (req, res) => {
   }
 };
 
+// Admin query user list
+exports.getUserList = async (req, res) => {
+  try {
+    const userId = req.userData.userId;
+    const userList = await userService.getUserList(userId);
+
+    let statusCode = 200;
+    let message = userList;
+
+    if (userList === 1) {
+      statusCode = 401;
+      message = 'User not found';
+    }
+
+    else if (userList === 2) {
+      statusCode = 402;
+      message = 'User is not admin or manager, no access to this content';
+    }
+
+    res.status(statusCode).json({ message });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 // Admin query user info
 exports.getUserProfileByEmail = async (req, res) => {
   try {

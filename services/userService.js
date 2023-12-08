@@ -257,6 +257,27 @@ async function verifyRole (userId){
 
 }
 
+
+// Query user list
+async function getUserList (userId){
+  const user = await verifyRole(userId);
+
+  // User not found or not admin
+  if (user === 1){
+    return 1;
+  }
+  else if (user === 2) {
+    return 2;
+  }
+
+  const userList = await User.find({}, '-password');
+  console.log("userList:", userList);
+
+  return userList;
+
+}
+
+
 // Query user info by email
 async function getUserProfileByEmail (userId, emailInput){
   const user = await verifyRole(userId);
@@ -316,6 +337,7 @@ module.exports = {
   updateUserPassword,
   logoutUser,
   verifyRole,
+  getUserList,
   getUserProfileByEmail,
   updateUserProfileByEmail,
 

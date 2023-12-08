@@ -16,6 +16,7 @@ router.post('/request-changing-password', authMiddleware, userController.request
 router.put('/update-password', authMiddleware, userController.updateUserPassword);
 router.put('/logout', authMiddleware, userController.logoutUser);
 router.get('/verify-admin', authMiddleware, userController.verifyRole);
+router.get('/admin-query-user-list', authMiddleware, userController.getUserList);
 router.get('/admin-query-userinfo', authMiddleware, userController.getUserProfileByEmail);
 router.put('/admin-update-userinfo', authMiddleware, userController.updateUserProfileByEmail);
 
