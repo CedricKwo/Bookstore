@@ -1,7 +1,7 @@
 module.exports = {
     mongodb: {
       // uri of mongodb
-      uri: 'mongodb://localhost:27017/bookstore',
+      uri: 'mongodb://mongodb-service.default.svc.cluster.local:27017/bookstore',
       // Other mongodb config
     },
     // Secret key for encrypt token
